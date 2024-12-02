@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Customer\Model\AccountManagement">
+        <plugin name="block_customer_authentication_plugin" type="WB\BlockedCustomerByEmail\Plugin\AccountManagementPlugin"/>
+    </type>
+
+    <type name="Magento\Framework\Event\ManagerInterface">
+        <plugin name="wb_blocked_customer_email" type="WB\BlockedCustomerByEmail\Model\Config"/>
+    </type>
+</config>
